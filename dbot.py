@@ -19,9 +19,9 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/
 #
 #======================================================================
-# Author: Christian Rebischke
+# Author: Christian Rebischke alias Shibumi
 # Email: Chris.Rebischke@gmail.com
-# GPG-ID: E2C0DC2A
+# GPG: E2C0DC2A
 #
 #
 # How your database must look like...
