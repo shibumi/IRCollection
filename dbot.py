@@ -20,6 +20,7 @@
 #
 #======================================================================
 # Author: Christian Rebischke alias Shibumi
+# Github: https://github.com/shibumi
 # Email: Chris.Rebischke@gmail.com
 # GPG: E2C0DC2A
 #
