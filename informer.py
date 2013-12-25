@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-# informer.py - A simple python script for checking joining users
+# informer.py - A simple xchat script for checking joining users
 # 
 # Copyright (c) 2013 by Christian Rebischke <Chris.Rebischke@gmail.com>
 #
@@ -19,11 +19,12 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/
 #
 #====================================================================== 
-#
 # Author: Christian Rebischke alias Shibumi
 # GitHub: https://github.com/shibumi
 # Email : Chris.Rebischke@gmail.com
 # GPG: E2C0DC2A
+#
+# ONLY FOR XCHAT/HEXCHAT(!!)
 #
 # TODO: Multichannel support
 #
