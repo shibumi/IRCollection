@@ -21,6 +21,7 @@
 #======================================================================
 # Author: Christian Rebischke
 # Email: Chris.Rebischke@gmail.com
+# GPG-ID: E2C0DC2A
 #
 #
 # How your database must look like...
