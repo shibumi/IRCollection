@@ -24,8 +24,8 @@
 # Email : Chris.Rebischke@gmail.com
 # GPG: E2C0DC2A
 #
-
-
+# Please set net_throttle on off -> /set net_throttle off
+#
 __module_name__="tormanager.py"
 __module_version__="1.0"
 __module_description__="Bans and unbans all tor exit nodes"
