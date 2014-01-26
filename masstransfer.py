@@ -34,18 +34,18 @@ __module_author__="shibumi"
 import xchat
 
 class masstransfer:
-	def __init__(self):
-		xchat.hook_command("masstransfer",self.process, help="/epicjoin <source> <destination> move every user from source to destination")
-		
-	def process(self, word, word_eol, userdata):
-		partchannel = word[1]
-		joinchannel = word[2]
-		cnc = xchat.find_context(channel = partchannel)
-		for user in cnc.get_list("users"):
-			cnc.command("QUOTE sapart %s %s " % (user.nick , partchannel))
-			cnc.command("QUOTE sajoin %s %s " % (user.nick , joinchannel))
-			
-			
-			
-			
+  def __init__(self):
+    xchat.hook_command("masstransfer",self.process, help="/epicjoin <source> <destination> move every user from source to destination")
+
+  def process(self, word, word_eol, userdata):
+    partchannel = word[1]
+    joinchannel = word[2]
+    cnc = xchat.find_context(channel = partchannel)
+    for user in cnc.get_list("users"):
+      cnc.command("QUOTE sapart %s %s " % (user.nick , partchannel))
+      cnc.command("QUOTE sajoin %s %s " % (user.nick , joinchannel))
+
+
 masstransfer()
+
+#set ts=2 sts=2 sw=2 et
