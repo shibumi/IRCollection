@@ -35,36 +35,38 @@ import xchat
 
 
 class main(object):
-	def __init__(self):
-		self.whoishook = None
-		self.timer = None
-		xchat.hook_command("megapart",self.megapart, help="/logpart <user> kicks a user out of every channel")
-  
-	def megapart(self, word, word_eol, userdata):
-		self.whoishook = xchat.hook_server("319",self.got_319)
-		self.timer = xchat.hook_timer(120000,self.reset)
-		user = word[1]
-		xchat.command("QUOTE whois %s" % user)
-		
-	def got_319(self, word, word_eol, userdata): 
-		user = word[3]
-		channel = word_eol[4].lstrip(":")
-		channel = channel.split(" ")
-		print "removing.. %s aus %r" % (user,channel)
-		for chan in channel:
-			xchat.command("QUOTE sapart %s %s" % (user, chan.lstrip("+%@&~")))
-		if self.whoishook:
-			xchat.unhook(self.whoishook)
-			self.whoishook = None
-		if self.timer:
-			xchat.unhook(self.timer)
-			self.timer = None
+  def __init__(self):
+    self.whoishook = None
+    self.timer = None
+    xchat.hook_command("megapart",self.megapart, help="/logpart <user> kicks a user out of every channel")
 
-	def reset(self, userdata):
-		if self.whoishook:
-			xchat.unhook(self.whoishook)
-			self.whoishook = None
-		self.timer = None
-		return False
+  def megapart(self, word, word_eol, userdata):
+    self.whoishook = xchat.hook_server("319",self.got_319)
+    self.timer = xchat.hook_timer(120000,self.reset)
+    user = word[1]
+    xchat.command("QUOTE whois %s" % user)
+
+  def got_319(self, word, word_eol, userdata): 
+    user = word[3]
+    channel = word_eol[4].lstrip(":")
+    channel = channel.split(" ")
+    print "removing.. %s aus %r" % (user,channel)
+    for chan in channel:
+      xchat.command("QUOTE sapart %s %s" % (user, chan.lstrip("+%@&~")))
+      if self.whoishook:
+        xchat.unhook(self.whoishook)
+        self.whoishook = None
+      if self.timer:
+        xchat.unhook(self.timer)
+        self.timer = None
+
+      def reset(self, userdata):
+        if self.whoishook:
+          xchat.unhook(self.whoishook)
+          self.whoishook = None
+        self.timer = None
+        return False
 
 main()
+
+#set ts=2 sts=2 sw=2 et
