@@ -64,14 +64,14 @@ except ImportError:
 def torban(data, buffer, args):
   for ip in urllib2.urlopen("http://torstatus.blutmagie.de/ip_list_exit.php/Tor_ip_list_EXIT.csv").readlines():
     weechat.command("","/quote ZLINE  %s/32 +10d Tor Exit please use oh6ev55uo4cmgh4w.onion to connect" % ip.strip("\n"))
-    weechat.prnt("","SUCCESS - Your IRC server will not accept tor-exit-node-users")
-    return weechat.WEECHAT_RC_OK
+  weechat.prnt("","SUCCESS - Your IRC server will not accept tor-exit-node-users")
+  return weechat.WEECHAT_RC_OK
 
 def torunban(data, buffer, args):
   for ip in urllib2.urlopen("http://torstatus.blutmagie.de/ip_list_exit.php/Tor_ip_list_EXIT.csv").readlines():
     weechat.command("","/quote ZLINE  %s/32" % ip.strip("\n"))
-    weechat.prnt("","DANGER - Your IRC server will accept tor-exit-node-users")
-    return weechat.WEECHAT_RC_OK
+  weechat.prnt("","DANGER - Your IRC server will accept tor-exit-node-users")
+  return weechat.WEECHAT_RC_OK
 
 if __name__ == "__main__":
   weechat.register(name, author, version, license, description, shutdown_function, charset)
