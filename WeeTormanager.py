@@ -31,6 +31,9 @@
 #
 # TODO: Use URL-Function
 #
+#
+
+
 name="WeeTormanager"
 author="Laughing_man"
 version="1.0"
@@ -40,31 +43,39 @@ shutdown_function=""
 charset=""
 
 try:
-    import socks 
-    import socket
-    socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS4, '127.0.0.1', 9050, True)
-    socket.socket = socks.socksocket
-    import weechat
-    import urllib2
+  import weechat
 
 except ImportError:
-    print("This script must be run under WeeChat.")
-    print("Get WeeChat now at: http://www.weechat.org/")
-    exit()
+  print("This script must be run under WeeChat.")
+  print("Get WeeChat now at: http://www.weechat.org/")
+  exit()
+
+try:
+  import socks
+  import socket
+  socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS4, '127.0.0.1', 9050, True)
+  socket.socket = socks.socksocket
+  import urllib2
+
+except ImportError:
+  print("Please install python-socksipy")
+  exit()
 
 def torban(data, buffer, args):
-    for ip in urllib2.urlopen("http://torstatus.blutmagie.de/ip_list_exit.php/Tor_ip_list_EXIT.csv").readlines():
-        weechat.command("","/quote ZLINE  %s/32 +10d Tor Exit please use oh6ev55uo4cmgh4w.onion to connect" % ip.strip("\n"))
+  for ip in urllib2.urlopen("http://torstatus.blutmagie.de/ip_list_exit.php/Tor_ip_list_EXIT.csv").readlines():
+    weechat.command("","/quote ZLINE  %s/32 +10d Tor Exit please use oh6ev55uo4cmgh4w.onion to connect" % ip.strip("\n"))
     weechat.prnt("","SUCCESS - Your IRC server will not accept tor-exit-node-users")
     return weechat.WEECHAT_RC_OK
 
 def torunban(data, buffer, args):
-    for ip in urllib2.urlopen("http://torstatus.blutmagie.de/ip_list_exit.php/Tor_ip_list_EXIT.csv").readlines():
-        weechat.command("","/quote ZLINE  %s/32" % ip.strip("\n"))
+  for ip in urllib2.urlopen("http://torstatus.blutmagie.de/ip_list_exit.php/Tor_ip_list_EXIT.csv").readlines():
+    weechat.command("","/quote ZLINE  %s/32" % ip.strip("\n"))
     weechat.prnt("","DANGER - Your IRC server will accept tor-exit-node-users")
     return weechat.WEECHAT_RC_OK
 
 if __name__ == "__main__":
-    weechat.register(name, author, version, license, description, shutdown_function, charset)
-    weechat.hook_command("torban","bans all exitnodes","","","","torban","")
-    weechat.hook_command("torunban","unbans all exitnodes","","","","torunban","")
+  weechat.register(name, author, version, license, description, shutdown_function, charset)
+  weechat.hook_command("torban","bans all exitnodes","","","","torban","")
+  weechat.hook_command("torunban","unbans all exitnodes","","","","torunban","")
+
+#set ts=2 sts=2 sw=2 et
