@@ -34,21 +34,23 @@ __module_author__="Shibumi"
 import xchat, urllib2
 
 class tormanager:
-	def __init__(self):
-		xchat.hook_command("torban",self.torban, help="/torban - bans all tor exit nodes")
-		xchat.hook_command("torunban", self.torunban, help="/torunban - unbans all tor exit nodes")
-		
-		
-	def torban(self, word, word_eol, userdata):
-		for ip in urllib2.urlopen("http://torstatus.blutmagie.de/ip_list_exit.php/Tor_ip_list_EXIT.csv").readlines():
-			xchat.command("ZLINE  %s/32 +10d Tor Exit please use oh6ev55uo4cmgh4w.onion to connect" % ip.strip("\n"))
-		print("SUCCESS - Your IRC server will not accept tor-exit-node-users")
-		
-	def torunban(self, word, word_eol, userdata):
-		for ip in urllib2.urlopen("http://torstatus.blutmagie.de/ip_list_exit.php/Tor_ip_list_EXIT.csv").readlines():
-			xchat.command("ZLINE  %s/32" % ip.strip("\n"))
-		print("DANGER - Your IRC server will accept tor-exit-node-users")
-			
-			
+  def __init__(self):
+    xchat.hook_command("torban",self.torban, help="/torban - bans all tor exit nodes")
+    xchat.hook_command("torunban", self.torunban, help="/torunban - unbans all tor exit nodes")
+
+
+  def torban(self, word, word_eol, userdata):
+    for ip in urllib2.urlopen("http://torstatus.blutmagie.de/ip_list_exit.php/Tor_ip_list_EXIT.csv").readlines():
+      xchat.command("ZLINE  %s/32 +10d Tor Exit please use oh6ev55uo4cmgh4w.onion to connect" % ip.strip("\n"))
+    print("SUCCESS - Your IRC server will not accept tor-exit-node-users")
+
+  def torunban(self, word, word_eol, userdata):
+    for ip in urllib2.urlopen("http://torstatus.blutmagie.de/ip_list_exit.php/Tor_ip_list_EXIT.csv").readlines():
+      xchat.command("ZLINE  %s/32" % ip.strip("\n"))
+    print("DANGER - Your IRC server will accept tor-exit-node-users")
+
+
 tormanager()
-		
+
+#set ts=2 sts=2 sw=2 et
+
