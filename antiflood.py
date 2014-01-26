@@ -33,24 +33,26 @@ __module_version__="1.0"
 __module_description__="zline joining spambots!"
 __module_author__="shibumi"
 
-REGEX="^[A-Za-z]{2}$"
-CHANNEL="#germany"
+REGEX="^[A-Za-z]{2}$" #example regex
+CHANNEL="#channel"    #example channel
 
 
 class antiflood(object):
-	def __init__(self):
-		xchat.hook_print("Join", self.onJoin)
-		
-	def onJoin(self, word, word_eol, userdata):
-		username = word[0]
-		pattern = re.compile(REGEX)
-		userhost = word[2]
-		userhost = userhost.split("@")
-		ident = userhost[0]
-		chars = len(ident)
-		if word[1] == CHANNEL:
-			if pattern.match(ident) != None:
-				xchat.command("ZLINE %s 10d mess with the best die like the rest" % username)
+  def __init__(self):
+    xchat.hook_print("Join", self.onJoin)
 
-			
+  def onJoin(self, word, word_eol, userdata):
+    username = word[0]
+    pattern = re.compile(REGEX)
+    userhost = word[2]
+    userhost = userhost.split("@")
+    ident = userhost[0]
+    chars = len(ident)
+    if word[1] == CHANNEL:
+      if pattern.match(ident) != None:
+        xchat.command("ZLINE %s 10d mess with the best die like the rest" % username)
+
+
 antiflood()
+
+#set ts=2 sts=2 sw=2 et
