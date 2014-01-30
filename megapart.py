@@ -53,12 +53,12 @@ class main(object):
     print "removing.. %s aus %r" % (user,channel)
     for chan in channel:
       xchat.command("QUOTE sapart %s %s" % (user, chan.lstrip("+%@&~")))
-      if self.whoishook:
-        xchat.unhook(self.whoishook)
-        self.whoishook = None
-      if self.timer:
-        xchat.unhook(self.timer)
-        self.timer = None
+    if self.whoishook:
+      xchat.unhook(self.whoishook)
+      self.whoishook = None
+    if self.timer:
+      xchat.unhook(self.timer)
+      self.timer = None
 
       def reset(self, userdata):
         if self.whoishook:
