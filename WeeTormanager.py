@@ -35,7 +35,7 @@
 
 
 name="WeeTormanager"
-author="Laughing_man"
+author="Shibumi"
 version="1.0"
 license="GPL"
 description="Bans and unbans all tor exit nodes"
