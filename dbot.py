@@ -3,7 +3,7 @@
 #
 # dbot.py - An IRC-Bot for providing an IRC-Server with restricted Tor-Access
 #
-# Copyright (c) 2013 by Christian Rebischke <Q2hyaXMuUmViaXNjaGtlQGdtYWlsLmNvbQo= | base64 -d>
+# Copyright (c) 2013 by Christian Rebischke <echo Q2hyaXMuUmViaXNjaGtlQGdtYWlsLmNvbQo= | base64 -d>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -21,7 +21,7 @@
 #======================================================================
 # Author: Christian Rebischke alias Shibumi
 # Github: https://github.com/shibumi
-# Email: Q2hyaXMuUmViaXNjaGtlQGdtYWlsLmNvbQo= | base64 -d
+# Email: echo Q2hyaXMuUmViaXNjaGtlQGdtYWlsLmNvbQo= | base64 -d
 # GPG: E2C0DC2A
 #
 #

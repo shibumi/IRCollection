@@ -3,7 +3,7 @@
 #
 # tormanager.py - A simple xchat script for banning all tor-exitnodes
 # 
-# Copyright (c) 2013 by Christian Rebischke <Q2hyaXMuUmViaXNjaGtlQGdtYWlsLmNvbQo= | base64 -d>
+# Copyright (c) 2013 by Christian Rebischke <echo Q2hyaXMuUmViaXNjaGtlQGdtYWlsLmNvbQo= | base64 -d>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -21,7 +21,7 @@
 #====================================================================== 
 # Author: Christian Rebischke alias Shibumi
 # GitHub: https://github.com/shibumi
-# Email : Q2hyaXMuUmViaXNjaGtlQGdtYWlsLmNvbQo= | base64 -d
+# Email : echo Q2hyaXMuUmViaXNjaGtlQGdtYWlsLmNvbQo= | base64 -d
 # GPG: E2C0DC2A
 #
 # Please set net_throttle on off -> /set net_throttle off
