@@ -3,7 +3,7 @@
 #
 # WeeTormanager.py - A simple script for weechat for banning all Tor-Exit-Nodes
 #
-# Copyright (c) 2013 by Christian Rebischke <Chris.Rebischke@gmail.com>
+# Copyright (c) 2013 by Christian Rebischke <Q2hyaXMuUmViaXNjaGtlQGdtYWlsLmNvbQo= | base64 -d>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -21,7 +21,7 @@
 #======================================================================
 # Author: Christian Rebischke alias Shibumi
 # Github: https://github.com/shibumi
-# Email: Chris.Rebischke@gmail.com
+# Email: Q2hyaXMuUmViaXNjaGtlQGdtYWlsLmNvbQo= | base64 -d
 # GPG: E2C0DC2A
 #
 # Please run this script with ircop axx ;) script is for ircops only
