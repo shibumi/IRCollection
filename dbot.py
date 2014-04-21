@@ -45,7 +45,7 @@ NICK=""
 CHAN=""
 LOGIN=""
 OPERLOGIN=""
-DATABSE=""
+DATABASE=""
 TORSUPPORT=0 #Enable torsupport with 1 ( needs socksipy )
 
 ################################################
