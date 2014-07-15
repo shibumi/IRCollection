@@ -22,7 +22,7 @@
 # Author: Christian Rebischke alias Shibumi
 # GitHub: https://github.com/shibumi
 # Email : echo Q2hyaXMuUmViaXNjaGtlQGdtYWlsLmNvbQo= | base64 -d
-# GPG: E2C0DC2A
+#
 #
 # Please set net_throttle on off -> /set net_throttle off
 #

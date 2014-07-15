@@ -22,7 +22,7 @@
 # Author: Christian Rebischke alias Shibumi
 # Github: https://github.com/shibumi
 # Email: echo Q2hyaXMuUmViaXNjaGtlQGdtYWlsLmNvbQo= | base64 -d
-# GPG: E2C0DC2A
+#
 #
 # Please run this script with ircop axx ;) script is for ircops only
 # Please set anti_flood_prio on 0

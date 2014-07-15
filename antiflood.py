@@ -22,7 +22,7 @@
 # Author: Christian Rebischke alias Shibumi
 # Github: https://github.com/shibumi
 # Email: echo Q2hyaXMuUmViaXNjaGtlQGdtYWlsLmNvbQo= | base64 -d
-# GPG: E2C0DC2A
+#
 #
 
 
